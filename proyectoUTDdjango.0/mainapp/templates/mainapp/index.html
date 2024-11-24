@@ -1,0 +1,18 @@
+{% extends "layouts/layouts.html" %}
+
+{% block title %}
+    {{title}}
+{% endblock title %}
+
+{% block content %}
+    <h1>{{title}}</h1>
+    <h2>{{content}}</h2>
+    {% if messages %}
+        {% for message in messages%}
+            <div class="alert-success">
+                {{message}}
+            </div>
+        {% endfor %}
+    {% endif %}
+
+{% endblock content %}
